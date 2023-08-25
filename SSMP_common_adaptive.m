@@ -35,8 +35,7 @@ Dist=[];                                                             %correction
     
     for i1=1:S_left
         k=T_set_left(i1);          
-        n_k=(k-1)+1:k;
-        H_k_i=P_i*H(:,n_k);
+        H_k_i=P_i*H(:,k);
         dist(k)=norm(U_y'*H_k_i)^2/(norm(H_k_i)^2);
     end
     [v,k_hat]=max(dist);           

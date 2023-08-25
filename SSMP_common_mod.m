@@ -39,7 +39,6 @@ for i_iter=1:nTx_AS
     B=H(:,T_index)*pinv(H(:,T_index));
     P_i=eye(nRx)-B;
     R_i=P_i*Y;
-    R_d=R_i-R_0;
 end
 
 T_user=T_set;
